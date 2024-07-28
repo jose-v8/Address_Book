@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 class  Address {
     private String houseNumber;
@@ -20,6 +19,12 @@ class  Address {
     String getCity() {return city;};
     String getState() {return state;};
     int getZip(){return zip;};
+
+    void setHouseNumber(String houseNumber){this.houseNumber=houseNumber;};
+    void setStreetName(String streetName){this.streetName=streetName;};
+    void setCity(String city){this.city=city;};
+    void setState(String state){this.state=state;};
+    void setZip(int zip){this.zip=zip;};
 }
 
 
@@ -48,13 +53,29 @@ public   class ContactPerson {
     int getPhoneNumber() {return phoneNumber;};
     String getEmail()   {return email;};
 
+    void setFirstName(String firstName){this.firstName=firstName;};
+    void setLastName(String lastName){this.lastName=lastName;};
+    void setAddress(Address address){this.address=address;};
+
+    void setHouseNumber(String houseNumber){this.address.setHouseNumber(houseNumber);};
+    void setStreetName(String streetName){this.address.setStreetName(streetName);};
+    void setCity(String city){this.address.setCity(city);};
+    void setSate(String state){this.address.setState(state);}
+    void setZip(int zip){this.address.setZip(zip);}
+
+    void setCountryCode(int countryCode){this.countryCode=countryCode;};
+    void setPhoneNumber(int phoneNumber){this.phoneNumber=phoneNumber;};
+    void setEmail(String email){this.email=email;};
+
+
+
 
     public String toString() {
-        return "Name: " + firstName + " " + lastName + "\n" +
-                "Address: " + address.getHouseNumber() + ", " + address.getStreetName() + ", " + address.getCity() + ", " + address.getState() + " - " + address.getZip() + "\n" +
-                "Country Code: " + countryCode + "\n" +
-                "Phone Number: " + phoneNumber + "\n" +
-                "Email: " + email;}
+        return  "Name           : " + firstName + " " + lastName + "\n" +
+                "Address        : " + address.getHouseNumber() + ", " + address.getStreetName() + ", " + address.getCity() + ", " + address.getState() + " - " + address.getZip() + "\n" +
+                "Country Code   : " + countryCode + "\n" +
+                "Phone Number   : " + phoneNumber + "\n" +
+                "Email          : " + email;}
 
 
 
