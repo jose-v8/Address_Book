@@ -41,7 +41,7 @@ public class AddressBook {
 
         inp.nextLine();
 
-        System.out.print("Enter the email: ");
+        System.out.print("Enter the email           : ");
         String email = inp.nextLine();
 
         Address address = new Address(houseNumber, streetName, city, state, zip);
@@ -62,6 +62,7 @@ public class AddressBook {
         {
             n+=1;
             System.out.println("Entry number "+n);
+            System.out.println();
             System.out.println(details+"\n");
         }
     }
