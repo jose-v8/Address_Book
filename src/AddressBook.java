@@ -191,4 +191,28 @@ public class AddressBook {
 
         return -1;
     }
+
+    void deleteContact()
+    {
+        Scanner inp=new Scanner(System.in);
+        System.out.println("Enter the name of the person to delete the contact ");
+        System.out.print("Enter the first name :");
+        String firstName=inp.next();
+        System.out.print("\nEnter the last name :");
+        String lastName=inp.next();
+
+        int pos=findDetails(firstName,lastName);
+
+        if (pos==-1)
+        {
+            System.out.println("The entry with the name "+ firstName+" "+lastName+" is not found");
+
+        }
+        else {
+            System.out.println("The corresponding value is found..\nThe entries of the particular member is :");
+            System.out.println(allContacts.get(pos));
+            allContacts.remove(pos);
+            System.out.println("The person is succesfully removed from the contacts");
+        }
+        }
 }
